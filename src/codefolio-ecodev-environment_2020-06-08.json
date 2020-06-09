@@ -1,0 +1,212 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-06-09T01:43:35.412Z",
+  "__export_source": "insomnia.desktop.app:v2020.2.1",
+  "resources": [
+    {
+      "_id": "req_aa298211bb9c4ec6ba4f740d21bae47a",
+      "authentication": {},
+      "body": {},
+      "created": 1591397317124,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591357141958.5,
+      "method": "GET",
+      "modified": 1591666925711,
+      "name": "get ITEMS",
+      "parameters": [],
+      "parentId": "fld_976d2dc1b8764597b73defc9e74b999a",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3333/items",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_976d2dc1b8764597b73defc9e74b999a",
+      "created": 1591666590509,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591357141971,
+      "modified": 1591666592973,
+      "name": "items",
+      "parentId": "fld_16753a6269464f74b64d3b935dbb8e93",
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_16753a6269464f74b64d3b935dbb8e93",
+      "created": 1591396885140,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000000000,
+      "modified": 1591396885228,
+      "name": "ECODEV",
+      "parentId": "wrk_538747ea156145f3a21663602ac72a6c",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_538747ea156145f3a21663602ac72a6c",
+      "created": 1591396860019,
+      "description": "",
+      "modified": 1591666985451,
+      "name": "ECODEV",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_a057e8f09a09490c9dbd378308f399d1",
+      "authentication": {},
+      "body": {},
+      "created": 1591666710299,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591666710299,
+      "method": "GET",
+      "modified": 1591666937075,
+      "name": "get ESPECIFIC POINT",
+      "parameters": [],
+      "parentId": "fld_af364ae68f5e459ba6e8a1136cf13ad2",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3333/points/1",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_af364ae68f5e459ba6e8a1136cf13ad2",
+      "created": 1591666576661,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591357141921,
+      "modified": 1591666582389,
+      "name": "point",
+      "parentId": "fld_16753a6269464f74b64d3b935dbb8e93",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_712711f888c14e17a6dc6c37f5bd2812",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Mercadinho MISTO\",\n\t\"email\": \"email@teste.com\",\n\t\"whatsapp\": \"11940836367\",\n\t\"latitude\": -46.81273213,\n\t\"longitude\": -35.19238112,\n\t\"city\": \"Barueri\",\n\t\"uf\": \"SP\",\n\t\"items\": [\n\t\t1,\n\t\t2,\n\t\t5,\n\t\t6\n\t]\n}"
+      },
+      "created": 1591405909050,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_e584c38412374df78faef0077a1f5b66",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591357141871,
+      "method": "POST",
+      "modified": 1591666636426,
+      "name": "create POINT",
+      "parameters": [],
+      "parentId": "fld_af364ae68f5e459ba6e8a1136cf13ad2",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3333/points",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d4660836c9e742eb85f9c5cad849fdbb",
+      "authentication": {},
+      "body": {},
+      "created": 1591412222224,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591357141821,
+      "method": "GET",
+      "modified": 1591666931256,
+      "name": "get FILTERED POINTS",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_57901a61a17941ccbfc62153da1357c4",
+          "name": "city",
+          "value": "Barueri"
+        },
+        {
+          "description": "",
+          "id": "pair_bcc031841041426993dea7837d4e107c",
+          "name": "uf",
+          "value": "SP"
+        },
+        {
+          "description": "",
+          "id": "pair_9b0c81c060b34ae0993e0ecbe76aef34",
+          "name": "items",
+          "value": "6"
+        },
+        {
+          "description": "",
+          "id": "pair_2c4033aa910e4aa29bbc17b0f6caad1d",
+          "name": "",
+          "value": ""
+        }
+      ],
+      "parentId": "fld_af364ae68f5e459ba6e8a1136cf13ad2",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3333/points",
+      "_type": "request"
+    },
+    {
+      "_id": "env_680f54ef66cb238d45b3bd78ca58541500aa4d38",
+      "color": null,
+      "created": 1591396860111,
+      "data": {},
+      "dataPropertyOrder": null,
+      "isPrivate": false,
+      "metaSortKey": 1591396860111,
+      "modified": 1591396860111,
+      "name": "Base Environment",
+      "parentId": "wrk_538747ea156145f3a21663602ac72a6c",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_680f54ef66cb238d45b3bd78ca58541500aa4d38",
+      "cookies": [],
+      "created": 1591396860113,
+      "modified": 1591396860113,
+      "name": "Default Jar",
+      "parentId": "wrk_538747ea156145f3a21663602ac72a6c",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_5a54cddee676411fbef7d18d6632eeb9",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1591396860029,
+      "fileName": "codefolio | ECODEV",
+      "modified": 1591396860029,
+      "parentId": "wrk_538747ea156145f3a21663602ac72a6c",
+      "_type": "api_spec"
+    }
+  ]
+}
